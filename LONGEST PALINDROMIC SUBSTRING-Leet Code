@@ -1,0 +1,30 @@
+class Solution 
+{
+    int resLen,resStart;
+    public String longestPalindrome(String s) 
+    {
+        int start;
+        for(start=0;start<s.length();start++)
+        {
+            expand(s,start,start);
+            expand(s,start,start+1);
+        }
+        
+        return s.substring(resStart,resStart+resLen);
+    
+    }
+    
+    public void expand(String s,int start,int end)
+    {
+        while(start>=0&&end<s.length()&&s.charAt(start)==s.charAt(end))
+        {
+             start--;
+             end++;
+        }
+        if(resLen<end-start-1)
+        {
+            resLen=end-start-1;
+            resStart=start+1;
+        }
+    }
+}

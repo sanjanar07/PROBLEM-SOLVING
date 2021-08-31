@@ -1,0 +1,29 @@
+class Solution 
+{
+    public String convert(String s, int numRows) 
+    {
+        int len=s.length();
+        int count=0;
+        
+        if(numRows>len||numRows<=1||len==1)
+            return s;
+        char[] ZZ=new char[len];
+        
+        int interval=2*numRows-2;
+        for(int i=0;i<numRows;i++)
+        {
+            int step=interval-2*i;
+            for(int j=i;j<len;j+=interval)
+            {
+                ZZ[count]=s.charAt(j);
+                count++;
+                if(step>0&&step<interval&&j+step<len)
+                {
+                    ZZ[count]=s.charAt(j+step);
+                    count++;
+                }
+            }
+        }
+     return new String(ZZ);   
+    }
+}

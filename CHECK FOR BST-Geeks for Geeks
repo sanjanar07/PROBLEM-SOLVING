@@ -1,0 +1,21 @@
+class BST
+{
+  public:
+    bool isBST(Node* root) 
+    {
+        isBSTT(root,INT_MIN,INT_MAX);
+    }
+    
+    bool isBSTT(Node *root,int min,int max)
+    {
+        
+           if(root==NULL)
+               return true;
+            
+           if(min >= root->data || max <=root->data)
+                 return false;
+                 
+            return isBSTT(root->left,min,root->data)&&isBSTT(root->right,root->data,max);
+    
+    }
+};

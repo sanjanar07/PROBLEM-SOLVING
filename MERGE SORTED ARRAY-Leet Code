@@ -1,0 +1,22 @@
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
+    {
+        /*1st solution
+        nums1.insert(nums1.end()-n,nums2.begin(),nums2.end());
+        sort(nums1.begin(),nums1.end()-n);
+        
+        auto iter1=nums1.begin()+m+n;
+        nums1.erase(iter1,nums1.end());
+        */
+        
+        /*2nd solution
+        int i = m - 1, j = n - 1, mn = m + n - 1;
+        while (j >= 0) {
+            nums1[mn--] = i >= 0 && nums1[i] > nums2[j] ? nums1[i--] : nums2[j--];
+        */
+        }
+        
+        
+    }
+};

@@ -1,0 +1,27 @@
+class Solution {
+public:
+    /*FIRST SOLUTION
+        unordered_map <int,int>num;
+        vector <int> arr;
+        
+        for(auto i:nums1)
+            num[i]++;
+        
+        for(auto i:nums2)
+        {
+            if(num[i]>0)
+                arr.push_back(i);
+            num[i]--;
+        }
+        return arr;
+        
+    }*/
+    /*SECOND SOLUTION
+    vector<int> intersect(vector<int>& a, vector<int>& b) {
+    sort(a.begin(), a.end());
+    sort(b.begin(), b.end());
+    a.erase(set_intersection(a.begin(), a.end(), b.begin(), b.end(),a.begin()), a.end());
+    return a;
+    */
+}
+};
